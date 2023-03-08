@@ -30,6 +30,11 @@ main section.categories-show {
         border-radius: 0.25rem;
       }
 
+      .flexbox-container{
+        display:flex;
+        justify-content: space-between;
+      }
+
       a {
         text-decoration: none;
       }
