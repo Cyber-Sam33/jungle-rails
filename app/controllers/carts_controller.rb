@@ -2,9 +2,7 @@ class CartsController < ApplicationController
 
   def show
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
-    if @cart.length < 1 
-      redirect_back fallback_location: root_path, :notice => '* * * Please add an item to the cart before checking out... * * *' 
-    end
+   
   end
 
   def add_item
