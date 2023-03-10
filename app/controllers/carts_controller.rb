@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  before_action :authorize
 
   def show
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
