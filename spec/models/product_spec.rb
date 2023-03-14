@@ -22,12 +22,6 @@ RSpec.describe Product, type: :model do
       end
     end
 
-    # describe Product, :name => do
-    #   it "Product is valid with valid attributes" do
-    #     expect (Product.new).to be_valid
-    #     # expect(@product.name).to eq "product_name"
-    #   end
-    # end
 
   describe "Product" do
     it "is not valid without a title" do
@@ -70,6 +64,14 @@ end
 #   it "is not valid without a end_date"
 # end
 
+
+
+    # describe Product, :name => do
+    #   it "Product is valid with valid attributes" do
+    #     expect (Product.new).to be_valid
+    #     # expect(@product.name).to eq "product_name"
+    #   end
+    # end
 
 
 
