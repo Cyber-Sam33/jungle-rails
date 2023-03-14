@@ -58,6 +58,10 @@ group :development, :test do
   gem 'rspec-rails'
   # instructed to include rspec-rails + net-smtp on compass
   gem 'net-smtp', require: false
+
+    # added files below and commented out above for testing with Cypress
+  gem "cypress-rails"
+  gem 'database_cleaner-active_record'
 end
 
 group :development do
@@ -78,6 +82,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
