@@ -11,23 +11,27 @@ RSpec.describe User, type: :model do
   describe "password" do
     it "is not valid if the password does not match" do
       @user = User.new(name:"test_user", email:'test_user@test.com', password:'123')
-    @user.password_confirmation = '1234'
+    @user.password_confirmation = '12345678'
     expect(@user).to_not be_valid
     expect(@user.errors[:password_confirmation]).to include("doesn't match Password")
     # puts @user.errors[:password_confirmation]
     end
  
-    it "if not valid when the email is uppercase " do
-      @user = User.create(name:"test_user", email:'test_user@test.com', password:'123', password_confirmation:'123')
-      @user2 = User.create(email:'TEST_USER@TEST.COM')
-      # puts User.find_by_email('1111@test.com')
 
+
+
+    # THIS TEST IS STILL FAILING - UNIQUE EMAILS
+    it "if not valid when the email is uppercase " do
+      @user = User.create(name:"test_user", email:'test_user@test.com', password:'12345678', password_confirmation:'12345678')
+      @user2 = User.create(name:'John', email:'TEST_USER@TEST.COM', password:'12345678', password_confirmation:'12345678')
+      # puts User.find_by_email('1111@test.com')
       expect(@user2).not_to be_valid 
     # puts @user.errors[:password_confirmation]
     end
 
+
     it "if no name entered should not be valid " do
-      @user = User.create(email:'test_user@test.com', password:'123', password_confirmation:'123')
+      @user = User.create(email:'test_user@test.com', password:'12345678', password_confirmation:'12345678')
       expect(@user).not_to be_valid 
     end
 
@@ -47,6 +51,22 @@ RSpec.describe User, type: :model do
     #     end
 
   end
+
+  describe '.authenticate_with_credentials' do
+    # examples for this class method here
+    it "authenticates with password and email" do
+    @user = User.create(name:"test_user", email:'test_user@test.com', password:'12345678', password_confirmation:'12345678')
+    @authenticated_user = User.authenticate_with_credentials('test_user@test.com', '12345678')
+    expect(@authenticated_user).to be_valid
+    end
+
+    it "authenticates with password and email if entered with different case" do
+    @user = User.create(name:"test_user", email:'test_user@test.com', password:'12345678', password_confirmation:'12345678')
+    @authenticated_user = User.authenticate_with_credentials('TEST_user@test.com', '12345678')
+    expect(@authenticated_user).to be_valid
+    end
+  end
+
 end
 
 # create_table "users", force: :cascade do |t|
