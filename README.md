@@ -1,6 +1,10 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1 that allows users to create an account, login and purchase items using a Strip teting credit card. This app also keeps track of the product inventory and allows 'Admin' users to access greater functionality, such as adding and deleting inventory products and categories that are stored in the database.
+
+# Getting Started
+
+Create a new repository using this repository as a template. Clone your repository onto your local device. Install dependencies using the npm install command. The app will be served at http://localhost:8080/. Go to http://localhost:8080/ in your browser. Follow the setup instructions below to get started.
 
 ## Setup
 
@@ -15,12 +19,12 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 
 ## Database
 
-If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
+If Rails has issues with authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
 
 ## Stripe Testing
 
+Use will need a Strip account to access this facility.
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
@@ -29,3 +33,11 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+- Testing using Cypress
+- Xquartz required for Cypress testing
+
+## Screenshots
+
+!["Screenshot of HomePage"]()
+!["Screenshot of Product Purchase"]()
+!["Screenshot of Prouct Inventory"]()
