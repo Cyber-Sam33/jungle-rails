@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 that allows users to create an account, login and purchase items using a Strip teting credit card. This app also keeps track of the product inventory and allows 'Admin' users to access greater functionality, such as adding and deleting inventory products and categories that are stored in the database.
+A mini e-commerce application built with Rails 6.1 that allows users to create an account, login and purchase items using a Stripe sample credit card authenticator. This app also keeps track of the product inventory and allows 'Admin' users to access greater functionality, such as adding and deleting inventory and creating new products and categories to add to the website.
 
 # Getting Started
 
