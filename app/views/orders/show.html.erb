@@ -15,7 +15,6 @@
         </tr>
       </thead>
       <tbody>
-      # add if statement to only render if one or more
       <% @order.line_items.each do |lineitem| %>
         <%= render 'lineitem', product:lineitem.product, quantity:lineitem.quantity.to_i%>  
         <% end %>
