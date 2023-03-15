@@ -39,5 +39,5 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 ## Screenshots
 
 !["Screenshot of HomePage"](https://github.com/Cyber-Sam33/jungle-rails/blob/master/docs/Homepage.png)
-!["Screenshot of Product Purchase"](https://github.com/Cyber-Sam33/jungle-rails/blob/master/docs/product_purchase.png)
+!["Screenshot of Cart Purchase"](https://github.com/Cyber-Sam33/jungle-rails/blob/master/docs/cart_purchase.png)
 !["Screenshot of Prouct Inventory"](https://github.com/Cyber-Sam33/jungle-rails/blob/master/docs/prduct_inventory.png)
